@@ -1,12 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import navbar from './components/navbar';
+import { Fragment } from 'react';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch
+} from 'react-router-dom';
+
+import Home from './components/Home';
 
 function App() {
   return (
-    <div className="App">
-     <navbar />
-    </div>
+    <Router>
+      <Fragment>
+        <Home />
+      </Fragment>
+    </Router>
   );
 }
 
